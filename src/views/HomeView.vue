@@ -1,22 +1,23 @@
 <template>
+	<h2 class="mt-2 mb-2">Formulario con vue.js</h2>
 	<form @submit.prevent="procesarFormulario">
 		<Input :tarea="tarea" />
 	</form>
-	<ListaTareas/>
+	<ListaTareas />
 </template>
 
 <script>
 import Input from '../components/Input.vue'
 import ListaTareas from '../components/ListaTareas.vue'
 import { mapActions } from 'vuex'
-const shortid = require('shortid'); 
+const shortid = require('shortid')
 // @ is an alias to /src
 
 export default {
 	name: 'HomeView',
 	components: {
 		Input,
-		ListaTareas
+		ListaTareas,
 	},
 	data() {
 		return {
